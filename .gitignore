@@ -1,3 +1,9 @@
+# Custom
+*.pyc
+apt_keys.py
+geckodriver.log
+Output.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
