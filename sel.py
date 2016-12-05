@@ -3,6 +3,9 @@ from selenium.webdriver.common.keys import Keys
 import json
 import re
 
+"""
+Selenium downloads the page source code. 
+"""
 def getPageSrc(url):
 	driver = webdriver.Firefox()
 	driver.get(url)
@@ -12,6 +15,9 @@ def getPageSrc(url):
 	file.close()
 	driver.close()
 
+"""
+Returns true if source code contains the phrase "see inside"
+"""
 def containsBusinessView():
 	contains = False
 

@@ -5,7 +5,9 @@ import api_keys
 
 API_KEY = api_keys.google_maps
 
-
+"""
+Returns ID to which uniquely identifies a business in Google Maps
+"""
 def getBusinessID(business_name, business_address):
     query = business_name + ", " + business_address
     query = query.replace(" ", "+")
@@ -19,6 +21,9 @@ def getBusinessID(business_name, business_address):
 
     return business_id
 
+"""
+Returns a direct URL to the business on Google Maps
+"""
 def getBusinessURL(business_id):
     url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=" + business_id + "&key=" + API_KEY
     r = urllib2.urlopen(url).read()
